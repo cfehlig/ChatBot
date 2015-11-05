@@ -40,6 +40,8 @@ public class Chatbot
 	
 	private void buildPoliticalTopicsList()
 	{
+		politicalTopicList.add("Donald Trump");
+		politicalTopicList.add("President");
 		
 	}
 	
@@ -83,6 +85,18 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
+int i;
+		
+		if(currentInput == null)
+			return false;
+		
+		for(i=0; i<politicalTopicList.size(); i++)
+		{
+			String temp = politicalTopicList.get(i);
+			if(temp.equalsIgnoreCase(currentInput))
+				return true;
+		}
+		
 		return false;
 	}
 	
