@@ -33,6 +33,8 @@ public class Chatbot
 	
 	private void buildMemesList()
 	{
+		memesList.add("Trolololol");
+		memesList.add("Me Gusta"); 
 		
 	}
 	
@@ -92,6 +94,18 @@ public class Chatbot
 	 */
 	public boolean memeChecker(String currentInput)
 	{
+		int i;
+		
+		if(currentInput == null)
+			return false;
+		
+		for(i=0; i<memesList.size(); i++)
+		{
+			String temp = memesList.get(i);
+			if(temp.equals(currentInput))
+				return true;
+		}
+		
 		return false;
 	}
 	
