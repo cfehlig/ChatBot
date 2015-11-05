@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Base version of the 2015 Chatbot class. Only stub methods are provided. Students will complete methods as part
  * of the project.
  * @author Cassandra Fehlig
- * @version 1.0 11/4/15
+ * @version 1.2 11/4/15
  */
 public class Chatbot
 {
@@ -68,13 +68,13 @@ public class Chatbot
 	 */
 	public boolean contentChecker(String currentInput)
 	{
-	
-		if(currentInput != null && currentInput.contains("soccerball"))
+		boolean hasContent = false;
+		if(currentInput.contains(content))
 		{
-			return true;
+			hasContent = true;
 		}
 	
-		return false;
+		return hasContent;
 	}
 	
 	/**
@@ -85,7 +85,7 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
-int i;
+		int i;
 		
 		if(currentInput == null)
 			return false;
