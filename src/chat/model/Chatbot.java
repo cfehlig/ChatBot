@@ -34,7 +34,7 @@ public class Chatbot
 	private void buildMemesList()
 	{
 		memesList.add("Trolololol");
-		memesList.add("Me Gusta"); 
+		 
 		
 	}
 	
@@ -53,12 +53,13 @@ public class Chatbot
 	 */
 	public boolean lengthChecker(String currentInput)
 	{
+		boolean hasLength = false;
 		if(currentInput != null && currentInput.length() > 0)
 		{
-			return true;
+			hasLength = true;
 		}
 		
-		return false;
+		return hasLength;
 	}
 	
 	/**
@@ -85,6 +86,8 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
+		boolean hasPolitical = false;
+		
 		int i;
 		
 		if(currentInput == null)
@@ -94,10 +97,10 @@ public class Chatbot
 		{
 			String temp = politicalTopicList.get(i);
 			if(temp.equalsIgnoreCase(currentInput))
-				return true;
+				hasPolitical = true;
 		}
 		
-		return false;
+		return hasPolitical;
 	}
 	
 	
@@ -108,6 +111,8 @@ public class Chatbot
 	 */
 	public boolean memeChecker(String currentInput)
 	{
+		boolean hasmeme = false;
+		
 		int i;
 		
 		if(currentInput == null)
@@ -116,11 +121,11 @@ public class Chatbot
 		for(i=0; i<memesList.size(); i++)
 		{
 			String temp = memesList.get(i);
-			if(temp.equals(currentInput))
-				return true;
+			if(currentInput.contains(temp))
+				hasmeme = true;
 		}
 		
-		return false;
+		return hasmeme;
 	}
 	
 	/**
