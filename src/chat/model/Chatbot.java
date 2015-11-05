@@ -25,7 +25,7 @@ public class Chatbot
 		this.memesList = new ArrayList<String>();
 		this.politicalTopicList = new ArrayList<String>();
 		this.userName = userName;
-		this.content = "Szechwan";
+		this.content = "Soccer";
 		
 		buildMemesList();
 		buildPoliticalTopicsList();
@@ -64,6 +64,12 @@ public class Chatbot
 	 */
 	public boolean contentChecker(String currentInput)
 	{
+	
+		if(currentInput != null && currentInput.contains("soccerball"))
+		{
+			return true;
+		}
+	
 		return false;
 	}
 	
