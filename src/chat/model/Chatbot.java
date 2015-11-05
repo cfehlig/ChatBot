@@ -45,6 +45,13 @@ public class Chatbot
 		
 	}
 	
+	public String processConversation(String currentInput)
+	{
+		String nextConversation = "";
+		
+		return nextConversation;
+	}
+	
 	/**
 	 * Checks the length of the supplied string. Returns false if the supplied String is empty or null,
 	 * otherwise returns true. 
@@ -134,7 +141,7 @@ public class Chatbot
 	 */
 	public String getUserName()
 	{
-		return null;
+		return userName;
 	}
 	
 	/**
@@ -143,7 +150,7 @@ public class Chatbot
 	 */
 	public String getContent()
 	{
-		return null;
+		return content;
 	}
 	
 	/**
@@ -152,7 +159,7 @@ public class Chatbot
 	 */
 	public ArrayList<String> getMemesList()
 	{
-		return null;
+		return memesList;
 	}
 	
 	/**
@@ -161,7 +168,7 @@ public class Chatbot
 	 */
 	public ArrayList<String> getPoliticalTopicList()
 	{
-		return null;
+		return politicalTopicList;
 	}
 	
 	/**

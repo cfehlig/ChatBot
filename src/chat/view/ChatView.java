@@ -27,7 +27,7 @@ public class ChatView
 		
 	}
 	
-	public String collectUserTest(String displayText)
+	public String collectUserText(String displayText)
 	{
 		String userInput ="";
 				
