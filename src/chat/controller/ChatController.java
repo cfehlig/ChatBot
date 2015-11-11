@@ -32,6 +32,14 @@ public class ChatController
 		String conversation = display.collectUserText("What would you like to talk about today?");
 		while(simpleBot.lengthChecker(conversation))
 		{
+			if(simpleBot.contentChecker(conversation))
+			{
+				display.displayText("Wow, I had no idea you loved " + simpleBot.getContent());
+			}
+			else if(simpleBot.memeChecker(conversation))
+			{
+				display.displayText("OMG Y U NO memes!");
+			}
 			conversation = simpleBot.processConversation(conversation);
 		}
 	}

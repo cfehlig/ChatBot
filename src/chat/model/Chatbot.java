@@ -47,8 +47,44 @@ public class Chatbot
 	
 	public String processConversation(String currentInput)
 	{
-		String nextConversation = "";
+		String nextConversation = "oh, what else would you like to talk about?";
+		int randomTopic = (int) (Math.random() * 5);
 		
+		switch (randomTopic)
+		{
+		case 0:
+			if(contentChecker(currentInput))
+			{
+				nextConversation = "hey you should talk about my special topic, " + "Wow! What is your favorite food?";	
+			}
+			break;
+		case 1:
+		if(memeChecker(currentInput))
+		{
+			nextConversation = "That is a popular meme this year! " + "Wow! What is your favorite food?";
+		}
+		
+			break;
+		case 2:
+		if(politicalTopicChecker(currentInput))
+		{
+			nextConversation = "Tcomment and a question";
+		}
+		
+			break;
+		case 3:
+		if(currentInput.length() > 10)
+		{
+			nextConversation = "comment and a question";
+		}
+			break;
+		case 4:
+		nextConversation = "Do you like ice cream?";
+			break;
+		default:
+		nextConversation = "How did we get here!";
+		break;
+		}
 		return nextConversation;
 	}
 	
@@ -170,7 +206,7 @@ public class Chatbot
 	{
 		return politicalTopicList;
 	}
-	
+
 	/**
 	 * Updates the content area for this Chatbot instance.
 	 * @param content The updated value for the content area.
