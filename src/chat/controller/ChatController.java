@@ -41,6 +41,7 @@ public class ChatController
 				display.displayText("OMG Y U NO memes!");
 			}
 			conversation = simpleBot.processConversation(conversation);
+			conversation = display.collectUserText(conversation);
 		}
 	}
 
