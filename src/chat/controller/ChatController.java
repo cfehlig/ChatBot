@@ -47,6 +47,11 @@ public class ChatController
 			conversation = display.collectUserText(conversation);
 		}
 	}
+	private void shutDown()
+	{
+		display.displayText("Goodbye, " + simpleBot.getUserName() + " it has been my pleasure to talk with you");
+		System.exit(0);
+	}
 	public Chatbot getChatbot()
 	{
 		return simpleBot;
