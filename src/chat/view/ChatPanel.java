@@ -31,6 +31,8 @@ public class ChatPanel extends JPanel
 		this.setBackground(Color.GREEN);
 		this.add(firstButton);
 		this.add(firstField);
+	
+		
 	}
 	
 	private void setupLayout()
@@ -60,4 +62,8 @@ public class ChatPanel extends JPanel
 		});
 	}
 
+	public JTextField getTextField()
+	{
+		return firstField;
+	}
 }
