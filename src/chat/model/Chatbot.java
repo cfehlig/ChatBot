@@ -171,6 +171,15 @@ public class Chatbot
 		return hasmeme;
 	}
 	
+	public boolean keyboardMashChecker(String content)
+	{
+		
+		if(content == null)
+			return false;
+		return true;
+	}
+
+	
 	/**
 	 * Returns the username of this Chatbot instance.
 	 * @return The username of the Chatbot.
@@ -214,5 +223,16 @@ public class Chatbot
 	public void setContent(String content)
 	{
 		
+	}
+	
+	public boolean quitChecker(String content)
+	{
+		if(content == null)
+			return false;
+
+		if (content.equalsIgnoreCase("quit"))
+			return true;
+		else
+			return false;
 	}
 }
