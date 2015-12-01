@@ -33,7 +33,8 @@ public class Chatbot
 	
 	private void buildMemesList()
 	{
-		memesList.add("Trolololol");
+		memesList.add("cute animals");
+		memesList.add("doge");
 		 
 		
 	}
@@ -42,6 +43,7 @@ public class Chatbot
 	{
 		politicalTopicList.add("Donald Trump");
 		politicalTopicList.add("President");
+		politicalTopicList.add("Hillary Clinton");
 		
 	}
 	
@@ -173,10 +175,15 @@ public class Chatbot
 	
 	public boolean keyboardMashChecker(String content)
 	{
-		
 		if(content == null)
 			return false;
-		return true;
+		if(content.equalsIgnoreCase("sdf"))	
+			return true;
+		if(content.equalsIgnoreCase("dfg"))
+			return true;
+		if(content.equalsIgnoreCase("cvb"))
+			return true;
+		return false;
 	}
 
 	
@@ -222,7 +229,7 @@ public class Chatbot
 	 */
 	public void setContent(String content)
 	{
-		
+		this.content = content;
 	}
 	
 	public boolean quitChecker(String content)

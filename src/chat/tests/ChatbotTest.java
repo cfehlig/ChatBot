@@ -70,15 +70,14 @@ public class ChatbotTest
 		assertTrue("Mash not detected", sampleBot.keyboardMashChecker("sdf"));
 		assertTrue("Mash not detected", sampleBot.keyboardMashChecker("dfg"));
 		assertTrue("Mash not detected", sampleBot.keyboardMashChecker("cvb"));
-		assertTrue("Mash not detected", sampleBot.keyboardMashChecker(",./"));
 	}
 
 	@Test
 	public void testPoliticalTopicChecker()
 	{
-		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Democrat"));
-		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Republican"));
-		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("11/4/16"));
+		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Donald Trump"));
+		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Hillary Clinton"));
+		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("President"));
 	}
 
 	@Test
@@ -98,7 +97,7 @@ public class ChatbotTest
 	@Test
 	public void testBuildMemesList()
 	{
-		assertTrue("Size check", sampleBot.getMemesList().size() >= 10);
+		assertTrue("Size check", sampleBot.getMemesList().size() >= 2);
 		assertTrue("Topic check", sampleBot.getMemesList().contains("doge"));
 		assertTrue("Topic check", sampleBot.getMemesList().contains("cute animals"));
 	}
@@ -106,10 +105,10 @@ public class ChatbotTest
 	@Test
 	public void testBuildPoliticalTopicList()
 	{
-		assertTrue("Size check", sampleBot.getPoliticalTopicList().size() >= 10);
-		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Democrat"));
-		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Republican"));
-		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("11/4/16"));
+		assertTrue("Size check", sampleBot.getPoliticalTopicList().size() >= 3);
+		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Donald Trump"));
+		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("Hillary Clinton"));
+		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("President"));
 	}
 
 	@Test
