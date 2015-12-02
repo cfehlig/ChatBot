@@ -70,7 +70,7 @@ public class Chatbot
 		case 2:
 		if(politicalTopicChecker(currentInput))
 		{
-			nextConversation = "Tcomment and a question";
+			nextConversation = "comment and a question";
 		}
 		
 			break;
@@ -241,5 +241,14 @@ public class Chatbot
 			return true;
 		else
 			return false;
+	}
+	
+	public boolean quitChecker(String QuitChecker)
+	{
+		boolean hasQuit = false;
+		
+		
+			
+		}
 	}
 }
