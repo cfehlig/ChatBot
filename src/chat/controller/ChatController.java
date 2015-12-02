@@ -24,6 +24,7 @@ public class ChatController
 		baseFrame = new ChatFrame(this);
 	}
 	
+	//creates what chatbot will say first
 	public void start()
 	{
 		display.displayText("Hello " + simpleBot.getUserName());
@@ -47,12 +48,14 @@ public class ChatController
 			conversation = display.collectUserText(conversation);
 		}
 	}
+	//shuts down chatbot and leaves with a message
 	private void shutDown()
 	{
 		display.displayText("Goodbye, " + simpleBot.getUserName() + " it has been my pleasure to talk with you");
 		System.exit(0);
 	}
 	
+	//
 	public String userToChatbot(String conversation)
 	{
 		String response = "";
@@ -66,6 +69,7 @@ public class ChatController
 		return response;		
 	}
 	
+	//getters only have one line of code: return content;
 	public Chatbot getChatbot()
 	{
 		return simpleBot;
