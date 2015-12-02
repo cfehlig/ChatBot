@@ -84,7 +84,7 @@ public class ChatPanel extends JPanel
 				chatArea.append("\nUser: " + userText); //display typed answer
 				typingField.setText("");
 				String response = baseController.userToChatbot(userText); //send the text to chatbot 
-				chatArea.append("\nChatbo " + response); //display the response
+				chatArea.append("\nChatbot " + response); //display the response
 			}
 		});
 	}
