@@ -15,7 +15,7 @@ public class ChatFrame extends JFrame
 		setupFrame();
 		
 	}
-	
+	//size of the frame and visibility
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);
@@ -23,6 +23,7 @@ public class ChatFrame extends JFrame
 		this.setVisible(true);
 		this.setTitle("Cassandra's Chatbot");
 	}
+	//getters only have one line of code: return content;
 	public ChatController getBaseController()
 	{
 		return baseController;

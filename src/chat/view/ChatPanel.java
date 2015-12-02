@@ -14,7 +14,7 @@ public class ChatPanel extends JPanel
 	private JTextArea chatArea;
 	private JLabel promptLabel;
 	
-	
+	//Below is the code for the placement of buttons, text fields, ect.
 	public ChatPanel(ChatController baseController)
 	{
 		this.baseController = baseController;
