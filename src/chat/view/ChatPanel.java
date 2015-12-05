@@ -8,29 +8,14 @@ import java.awt.Color;
 public class ChatPanel extends JPanel
 {
 	private ChatController baseController;
-	private JButton submitButton;
-	private JTextField typingField;
+	private JButton firstButton;
+	private JTextField firstField;
 	private SpringLayout baseLayout;
-	private JTextArea chatArea;
-	private JLabel promptLabel;
 	
-	//Below is the code for the placement of buttons, text fields, ect.
 	public ChatPanel(ChatController baseController)
 	{
 		this.baseController = baseController;
-		submitButton = new JButton("Click Me!");
-		typingField = new JTextField("Hi I'm Chatbot!");
 		baseLayout = new SpringLayout();
-		baseLayout.putConstraint(SpringLayout.NORTH, submitButton, 198, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.EAST, submitButton, -10, SpringLayout.EAST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, typingField, -10, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.EAST, typingField, -10, SpringLayout.EAST, this);
-		chatArea = new JTextArea(10,30);
-		baseLayout.putConstraint(SpringLayout.SOUTH, chatArea, -6, SpringLayout.NORTH, submitButton);
-		baseLayout.putConstraint(SpringLayout.EAST, chatArea, -10, SpringLayout.EAST, this);
-		promptLabel = new JLabel("Chat with me");
-		baseLayout.putConstraint(SpringLayout.SOUTH, promptLabel, -6, SpringLayout.NORTH, chatArea);
-		baseLayout.putConstraint(SpringLayout.EAST, promptLabel, -158, SpringLayout.EAST, this);
 		
 		setupPanel();
 		setupLayout();
@@ -42,12 +27,8 @@ public class ChatPanel extends JPanel
 	{
 		this.setLayout(baseLayout);
 		this.setBackground(Color.GREEN);
-		this.add(chatArea);
-		this.add(typingField);
-		this.add(submitButton);
-		this.add(promptLabel);
-		typingField.setToolTipText("Type here for the chatbot");
-		chatArea.setEnabled(false);
+		this.add(firstButton);
+		this.add(firstField);
 	
 		
 	}
@@ -70,27 +51,17 @@ public class ChatPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		submitButton.addActionListener(new ActionListener()
+		firstButton.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				//need to do this
-				//Grab user typed answer
-				//display typed answer
-				//send the text to chatbot
-				//chatbot will process
-				//display the response
-				String userText = typingField.getText();  //Grab user typed answer
-				chatArea.append("\nUser: " + userText); //display typed answer
-				typingField.setText("");
-				String response = baseController.userToChatbot(userText); //send the text to chatbot 
-				chatArea.append("\nChatbot " + response); //display the response
+				firstField.setText("Wow,This is the most amazing ChatBot ever!");
 			}
 		});
 	}
 
 	public JTextField getTextField()
 	{
-		return typingField;
+		return firstField;
 	}
 }

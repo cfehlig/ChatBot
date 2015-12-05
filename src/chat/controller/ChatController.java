@@ -55,7 +55,7 @@ public class ChatController
 		System.exit(0);
 	}
 	
-	//
+	//String method
 	public String userToChatbot(String conversation)
 	{
 		String response = "";
